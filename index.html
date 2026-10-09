@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f5f3ee" />
+  <meta name="description" content="Vyshakh Balakrishnan — personal portfolio." />
+  <title>Vyshakh Balakrishnan — Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <style id="landing-fallback">
+*{box-sizing:border-box}body{margin:0;background:#f5f3ee;color:#151515;font-family:"DM Sans",sans-serif}
+a{color:inherit;text-decoration:none}.hero{position:relative;min-height:100svh;isolation:isolate;overflow:hidden}
+.photo-stage,.photo,.waves,.reveal-layer{position:absolute;inset:0;width:100%;height:100%}.photo{object-fit:cover}.photo-stage{z-index:0}.waves{fill:none;stroke:currentColor;stroke-width:1;opacity:.12;pointer-events:none}
+.ui{position:absolute;inset:0;width:100%;height:100%}.ui--base{z-index:2}.ui--reveal{color:white}.reveal-layer{z-index:3;pointer-events:none}
+.brand{font-family:"Playfair Display",Georgia,serif;font-size:clamp(40px,5.5vw,82px);line-height:1.06;letter-spacing:-.055em}.brand span{display:block}
+.socials{position:absolute;right:5vw;bottom:32px;display:flex;gap:22px}.social{display:block;width:21px;height:21px}.social svg{display:block;width:100%;height:100%;fill:currentColor}
+.cv-download{position:absolute;left:clamp(24px,5vw,88px);bottom:24px;z-index:4;display:inline-flex;align-items:center;gap:10px;padding:12px 17px;border:1px solid currentColor;border-radius:99px;font:600 9px/1.2 "DM Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;transition:background .25s,color .25s}
+.cv-download:hover,.cv-download:focus-visible{background:#151515;color:#f5f3ee;outline-offset:4px}
+.ui--reveal .cv-download:hover,.ui--reveal .cv-download:focus-visible{background:#f5f3ee;color:#151515}
+</style>
+<link rel="stylesheet" href="styles.css" />
+<style id="intro-and-portfolio-enhancements">
+/* Identical positioning in the base and masked interface keeps the reveal aligned. */
+.hero{min-height:max(760px,100svh)}
+.ui .intro-copy{position:absolute;left:clamp(24px,5vw,88px);top:clamp(40px,8vh,100px);width:min(500px,44vw);text-align:left}
+.ui .intro-copy .brand{position:static;inset:auto;display:block;transform:none;width:auto;max-width:none;margin:0}
+.intro-designations{margin:24px 0 0;max-width:480px;font-family:"DM Sans",sans-serif;font-size:12px;font-weight:500;line-height:1.85;letter-spacing:.025em}
+.intro-location{display:flex;align-items:center;gap:8px;margin:10px 0 0;font-family:"DM Sans",sans-serif;font-size:11px;line-height:1.6;letter-spacing:.08em}
+.intro-location:before{content:"";width:4px;height:4px;border-radius:50%;background:currentColor;flex:none}
+.ui .portfolio-link{position:absolute;inset:clamp(36px,6vh,70px) clamp(24px,5vw,88px) auto auto;display:grid;grid-template-columns:auto 42px;align-items:center;gap:7px 16px;padding:10px 0 14px;font-family:"Playfair Display",Georgia,serif;font-size:clamp(24px,2.6vw,40px);line-height:1.2;letter-spacing:-.025em;transform:none;text-decoration:none}
+.portfolio-arrow{display:grid;place-items:center;width:42px;height:42px;border:1px solid currentColor;border-radius:50%;font:24px/1 "DM Sans",sans-serif;transition:transform .45s cubic-bezier(.16,1,.3,1),background .3s,color .3s}
+.portfolio-hint{grid-column:1/-1;font-family:"DM Sans",sans-serif;font-size:10px;line-height:1.6;letter-spacing:.12em;text-transform:uppercase;opacity:.65}
+.portfolio-link:after{content:"";position:absolute;bottom:0;left:0;width:100%;height:1px;background:currentColor;transform:scaleX(.26);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.portfolio-link:hover:after,.portfolio-link:focus-visible:after{transform:scaleX(1)}
+.portfolio-link:hover .portfolio-arrow,.portfolio-link:focus-visible .portfolio-arrow{transform:rotate(45deg);background:#151515;color:#f5f3ee}
+.portfolio-link:focus-visible{outline:2px solid currentColor;outline-offset:8px}
+.cv-actions{position:absolute;left:clamp(24px,5vw,88px);bottom:24px;z-index:4;display:flex;align-items:center;gap:10px}
+.cv-actions .cv-action{position:static;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 17px;border:1px solid currentColor;border-radius:99px;font:600 9px/1.2 "DM Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;transition:background .25s,color .25s,transform .25s}
+.cv-actions .cv-action:hover,.cv-actions .cv-action:focus-visible{background:#151515;color:#f5f3ee;outline-offset:4px;transform:translateY(-2px)}
+.cv-actions .cv-view{background:rgba(245,243,238,.12);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.ui--reveal .cv-actions .cv-action:hover,.ui--reveal .cv-actions .cv-action:focus-visible{background:#f5f3ee;color:#151515}
+@media(prefers-reduced-motion:no-preference){
+.intro-copy{animation:intro-arrive .9s cubic-bezier(.16,1,.3,1) both}
+.portfolio-label{animation:portfolio-invite 3s ease-in-out .8s 3}
+@keyframes intro-arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes portfolio-invite{0%,100%{transform:translateY(0)}45%{transform:translateY(-4px)}65%{transform:translateY(0)}}
+}
+@media(max-width:760px){
+.hero{min-height:960px;min-height:max(960px,100svh)}
+.ui .intro-copy{display:none}
+.ui .portfolio-link{top:24px;right:24px;font-size:25px;gap:5px 12px}
+.portfolio-arrow{width:36px;height:36px;font-size:21px}.socials{bottom:30px;right:24px}
+.cv-actions{left:24px;bottom:24px;gap:8px}.cv-actions .cv-action{padding:11px 13px;font-size:8px;letter-spacing:.1em}
+}
+@media(prefers-reduced-motion:reduce){.intro-copy,.portfolio-label{animation:none!important}.portfolio-link:after,.portfolio-arrow{transition:none!important}}
+</style>
+</head>
+<body>
+  <main class="hero" id="top" aria-label="Vyshakh Balakrishnan portfolio landing page">
+    <div class="photo-stage" aria-hidden="true">
+      <img class="photo photo--base" src="assets/portrait-bw.jpg" alt="" />
+    </div>
+
+    <svg class="waves" viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M-80 610 C 160 515, 305 705, 540 615 S 925 515, 1180 620 S 1490 735, 1690 585" />
+      <path d="M-120 665 C 120 560, 345 755, 575 665 S 970 555, 1215 670 S 1505 790, 1700 635" />
+      <path d="M-100 555 C 150 460, 330 650, 565 560 S 930 460, 1190 565 S 1505 675, 1690 535" />
+    </svg>
+
+    <!-- Base interface: black. The white duplicate is inside the reveal mask below. -->
+    <div class="ui ui--base">
+      <div class="intro-copy"><a class="brand" href="#top" aria-label="Vyshakh Balakrishnan home">
+        <span>Vyshakh</span>
+        <span>Balakrishnan</span>
+      </a><p class="intro-designations">Senior Creative Designer | AI Creative Designer | UI/UX | Motion Graphics | Video Editor</p><p class="intro-location">Dubai, UAE</p></div>
+
+      <a class="portfolio-link interactive" href="Portfolio.html" aria-label="Explore my portfolio"><span class="portfolio-label">Portfolio</span><span class="portfolio-arrow" aria-hidden="true">↗</span><span class="portfolio-hint">Explore my work</span></a>
+
+      <nav class="socials" aria-label="Social media">
+        <!-- Replace these four href values with your exact profile URLs. -->
+        <a class="social interactive" href="https://www.instagram.com/vyshakvb/" target="_blank" rel="noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M7.3 2h9.4A5.3 5.3 0 0 1 22 7.3v9.4a5.3 5.3 0 0 1-5.3 5.3H7.3A5.3 5.3 0 0 1 2 16.7V7.3A5.3 5.3 0 0 1 7.3 2Zm-.18 2A3.12 3.12 0 0 0 4 7.12v9.76A3.12 3.12 0 0 0 7.12 20h9.76A3.12 3.12 0 0 0 20 16.88V7.12A3.12 3.12 0 0 0 16.88 4H7.12ZM17.5 5.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+        </a>
+        <a class="social interactive" href="https://x.com/" target="_blank" rel="noreferrer" aria-label="X / Twitter">
+          <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M18.9 2H22l-6.78 7.75L23.2 22h-6.25l-4.9-6.4L6.45 22H3.34l7.25-8.29L2.93 2h6.4l4.43 5.86L18.9 2Zm-1.1 17.84h1.72L8.4 4.05H6.55L17.8 19.84Z"/></svg>
+        </a>
+        <a class="social interactive" href="https://www.youtube.com/@vyshakhbalakrishnan3326" target="_blank" rel="noreferrer" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.13C19.55 3.5 12 3.5 12 3.5s-7.55 0-9.4.57A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.13c1.85.57 9.4.57 9.4.57s7.55 0 9.4-.57a3 3 0 0 0 2.1-2.13A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.7V8.3l6.4 3.7-6.4 3.7Z"/></svg>
+        </a>
+        <a class="social interactive" href="https://www.linkedin.com/in/vyshakh-balakrishnan-42935a190/?isSelfProfile=true" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.86-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V8.99h3.41v1.57h.05c.47-.9 1.63-1.86 3.36-1.86 3.59 0 4.25 2.36 4.25 5.44v6.31ZM5.33 7.42a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.1 20.45H3.55V8.99H7.1v11.46Z"/></svg>
+        </a>
+      </nav>
+      <div class="cv-actions" aria-label="Curriculum vitae">
+        <a class="cv-action cv-view" href="Vyshakh-Balakrishnan-CV.pdf" target="_blank" rel="noopener noreferrer">View CV <span aria-hidden="true">↗</span></a>
+        <a class="cv-action cv-download" href="Vyshakh-Balakrishnan-CV.pdf" download="Vyshakh-Balakrishnan-CV.pdf">Download CV <span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+
+    <!-- Alternate colour portrait + a white copy of the interface, both masked by the same gooey blob. -->
+    <svg class="reveal-layer" id="revealLayer" width="100%" height="100%" aria-hidden="true">
+      <defs>
+        <filter id="goo" color-interpolation-filters="sRGB" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="18" result="blur" />
+          <feColorMatrix in="blur" mode="matrix"
+            values="1 0 0 0 0
+                    0 1 0 0 0
+                    0 0 1 0 0
+                    0 0 0 28 -11" result="goo" />
+        </filter>
+
+        <mask id="blobMask" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
+          <rect id="maskBackdrop" x="0" y="0" width="100%" height="100%" fill="black" />
+          <g id="gooGroup" filter="url(#goo)">
+            <circle class="goo-circle" cx="-500" cy="-500" r="112" fill="white" />
+            <circle class="goo-circle" cx="-500" cy="-500" r="86" fill="white" />
+            <circle class="goo-circle" cx="-500" cy="-500" r="72" fill="white" />
+            <circle class="goo-circle" cx="-500" cy="-500" r="58" fill="white" />
+          </g>
+          <g id="trailGroup">
+            <circle class="trail-circle" cx="-500" cy="-500" r="55" fill="white" opacity=".34" />
+            <circle class="trail-circle" cx="-500" cy="-500" r="46" fill="white" opacity=".28" />
+            <circle class="trail-circle" cx="-500" cy="-500" r="38" fill="white" opacity=".22" />
+            <circle class="trail-circle" cx="-500" cy="-500" r="31" fill="white" opacity=".17" />
+            <circle class="trail-circle" cx="-500" cy="-500" r="24" fill="white" opacity=".12" />
+            <circle class="trail-circle" cx="-500" cy="-500" r="18" fill="white" opacity=".08" />
+          </g>
+        </mask>
+      </defs>
+
+      <image id="revealPhoto" href="assets/portrait-color.jpg" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" mask="url(#blobMask)" />
+
+      <foreignObject x="0" y="0" width="100%" height="100%" mask="url(#blobMask)" class="masked-interface">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="ui ui--reveal">
+          <div class="intro-copy"><div class="brand" aria-hidden="true">
+            <span>Vyshakh</span>
+            <span>Balakrishnan</span>
+          </div><p class="intro-designations">Senior Creative Designer | AI Creative Designer | UI/UX | Motion Graphics | Video Editor</p><p class="intro-location">Dubai, UAE</p></div>
+          <div class="portfolio-link" aria-hidden="true"><span class="portfolio-label">Portfolio</span><span class="portfolio-arrow" aria-hidden="true">↗</span><span class="portfolio-hint">Explore my work</span></div>
+          <div class="cv-actions" aria-hidden="true">
+            <span class="cv-action cv-view">View CV <span>↗</span></span>
+            <span class="cv-action cv-download">Download CV <span>↓</span></span>
+          </div>
+          <div class="socials" aria-hidden="true">
+            <span class="social"><svg viewBox="0 0 24 24"><path d="M7.3 2h9.4A5.3 5.3 0 0 1 22 7.3v9.4a5.3 5.3 0 0 1-5.3 5.3H7.3A5.3 5.3 0 0 1 2 16.7V7.3A5.3 5.3 0 0 1 7.3 2Zm-.18 2A3.12 3.12 0 0 0 4 7.12v9.76A3.12 3.12 0 0 0 7.12 20h9.76A3.12 3.12 0 0 0 20 16.88V7.12A3.12 3.12 0 0 0 16.88 4H7.12ZM17.5 5.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></span>
+            <span class="social"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-6.78 7.75L23.2 22h-6.25l-4.9-6.4L6.45 22H3.34l7.25-8.29L2.93 2h6.4l4.43 5.86L18.9 2Zm-1.1 17.84h1.72L8.4 4.05H6.55L17.8 19.84Z"/></svg></span>
+            <span class="social"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.13C19.55 3.5 12 3.5 12 3.5s-7.55 0-9.4.57A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.13c1.85.57 9.4.57 9.4.57s7.55 0 9.4-.57a3 3 0 0 0 2.1-2.13A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.7V8.3l6.4 3.7-6.4 3.7Z"/></svg></span>
+            <span class="social"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.86-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V8.99h3.41v1.57h.05c.47-.9 1.63-1.86 3.36-1.86 3.59 0 4.25 2.36 4.25 5.44v6.31ZM5.33 7.42a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.1 20.45H3.55V8.99H7.1v11.46Z"/></svg></span>
+          </div>
+        </div>
+      </foreignObject>
+    </svg>
+
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div id="portfolio" class="portfolio-anchor" aria-hidden="true"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

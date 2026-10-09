@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0d0d0d" />
+<title>Minnal Murali — Vyshakh Balakrishnan</title>
+<meta name="description" content="A curated Minnal Murali key-art and poster-design showcase by Vyshakh Balakrishnan, featuring cinematic character artwork, title treatments, action posters and illustrated visual explorations." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#151515;
+  --paper:#f4f4f4;
+  --muted:#8a8a8a;
+  --line:#d8d8d8;
+  --hero:#0e0e0e;
+  --yellow:#ffdf00;
+  --blue:#153f9a;
+  --pad:clamp(22px,2.35vw,46px);
+  --content:min(1260px,72vw);
+  --ease:cubic-bezier(.2,.75,.18,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,sans-serif;overflow-x:hidden}
+a{text-decoration:none;color:inherit}button{font:inherit}.mono{font-family:"DM Mono",monospace;text-transform:uppercase;letter-spacing:.11em}
+::selection{background:var(--yellow);color:#111}
+
+/* ===== FIXED HEADER ===== */
+.site-header{position:fixed;z-index:80;top:0;left:0;right:0;padding:21px var(--pad);display:flex;justify-content:space-between;align-items:center;color:#fff;transition:color .35s ease,background .35s ease;pointer-events:none}
+.site-header>*{pointer-events:auto}.site-header.on-light{color:#111}
+.brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:14px;letter-spacing:.02em}.brand-mark{width:25px;height:25px;position:relative;transform:skewX(-12deg)}
+.brand-mark:before,.brand-mark:after{content:"";position:absolute;background:linear-gradient(135deg,var(--yellow),#fff38a)}
+.brand-mark:before{width:21px;height:11px;left:0;top:1px;clip-path:polygon(22% 0,100% 0,72% 100%,0 100%)}
+.brand-mark:after{width:18px;height:15px;right:0;bottom:0;clip-path:polygon(24% 0,100% 0,42% 100%,42% 52%,0 52%)}
+.brand sup{font:8px "DM Mono",monospace;margin-left:-3px;margin-top:-6px}.header-actions{display:flex;align-items:center;gap:12px}
+.pill{border:1px solid currentColor;color:inherit;background:transparent;height:31px;display:inline-grid;place-items:center;border-radius:99px;padding:0 20px;font:10px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase}
+.back-portfolio{background:#fff;color:#111;border-color:#fff}.site-header.on-light .back-portfolio{background:#111;color:#fff;border-color:#111}
+
+/* ===== HERO ===== */
+.hero{height:100svh;min-height:650px;position:relative;overflow:hidden;background:var(--hero);color:#fff}
+.hero-cover{position:absolute;inset:0;z-index:1}
+.hero-cover img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block;transform:scale(1.01);filter:saturate(1.02) contrast(1.02)}
+.hero-ambient{position:absolute;inset:0;z-index:2;background:
+ radial-gradient(circle at 66% 39%,rgba(255,223,0,.14),transparent 24%),
+ radial-gradient(circle at 39% 45%,rgba(21,63,154,.12),transparent 26%),
+ linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.26) 42%,rgba(0,0,0,.58) 100%)}
+.hero-grid{position:absolute;inset:0;z-index:3;opacity:.06;background-image:linear-gradient(rgba(255,255,255,.15) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.15) 1px,transparent 1px);background-size:90px 90px;mask-image:linear-gradient(to bottom,transparent,black 35%,black 70%,transparent)}
+.hero:after{content:"";position:absolute;inset:0;z-index:3;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.62));pointer-events:none}
+.hero-copy{position:absolute;z-index:4;left:var(--pad);right:var(--pad);bottom:88px}.eyebrow{font:10px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:#b6b6b6;margin-bottom:28px}
+.hero h1{font-size:clamp(66px,7vw,138px);font-weight:300;letter-spacing:-.075em;line-height:.88;margin:0 0 27px;max-width:1500px;white-space:nowrap}.hero-tags{display:flex;gap:8px;flex-wrap:wrap}.chip{border:1px solid rgba(255,255,255,.48);border-radius:99px;padding:6px 13px;color:#eee;font:9px "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase}
+.hero-bottom{position:absolute;z-index:4;left:var(--pad);right:var(--pad);bottom:25px;border-top:1px solid rgba(255,255,255,.28);padding-top:13px;display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;color:#aaa;font:9px "DM Mono",monospace;letter-spacing:.13em;text-transform:uppercase}.hero-bottom span:nth-child(2){text-align:center}.hero-bottom span:nth-child(3){text-align:right}.scroll-arrow{display:inline-block;margin-left:8px;transform:rotate(45deg)}.hero-dot{position:absolute;z-index:5;top:2px;left:50%;width:9px;height:9px;border-radius:50%;background:#d7d7d7;transform:translateX(-50%)}
+
+/* ===== CONTENT ===== */
+.light-section{background:#f5f5f5}.content{width:var(--content);margin:auto}.overview{padding:112px 0 145px}.section-row{display:flex;justify-content:space-between;align-items:center;color:#737373;font:10px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase}
+.overview-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(330px,1fr);gap:90px;margin-top:60px}.overview-lead{font-size:clamp(22px,1.55vw,30px);font-weight:300;line-height:1.42;letter-spacing:-.035em;margin:0;max-width:750px}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px 62px;padding-top:1px}.info small{display:block;color:#aaa;font:9px "DM Mono",monospace;letter-spacing:.15em;text-transform:uppercase;margin-bottom:12px}.info strong{font-size:14px;font-weight:400}
+
+/* Natural-ratio masonry gallery. Images are never cropped. */
+.gallery-section{padding:0 0 130px}.gallery-head{padding-top:22px;margin-bottom:56px}.gallery{columns:2;column-gap:22px}.work{display:block;break-inside:avoid;margin:0 0 22px;background:#e7e7e7;border-radius:10px;overflow:hidden;position:relative;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.025)}
+.work img{width:100%;height:auto;display:block;transition:transform .8s var(--ease),filter .5s ease}.work:hover img{transform:scale(1.015);filter:saturate(.94)}.work-overlay{position:absolute;inset:auto 0 0;padding:82px 18px 17px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.66));opacity:0;transition:opacity .35s ease;display:flex;justify-content:space-between;align-items:end;pointer-events:none}.work:hover .work-overlay{opacity:1}.work-overlay h3{margin:0;font-size:18px;font-weight:400;letter-spacing:-.03em}.work-overlay p{margin:5px 0 0;font:9px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.1em}
+.work-num{font:9px "DM Mono",monospace;letter-spacing:.13em}.gallery-note{margin-top:18px;color:#999;font:9px "DM Mono",monospace;letter-spacing:.11em;text-transform:uppercase}
+
+/* ===== FOOTER ===== */
+ .footer{background:#101010;color:white;padding:90px var(--pad) 28px}.footer-inner{width:min(1500px,100%);margin:auto}.footer-kicker{font:10px "DM Mono",monospace;letter-spacing:.13em;text-transform:uppercase;color:#878787}.footer h2{font-size:clamp(64px,9vw,155px);font-weight:300;letter-spacing:-.075em;line-height:.88;margin:34px 0 90px;max-width:1220px}.footer-meta{border-top:1px solid #333;padding-top:18px;display:flex;justify-content:space-between;color:#777;font:9px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase}
+
+/* ===== LIGHTBOX ===== */
+/* ===== LIGHTBOX ===== */
+.lightbox{position:fixed;z-index:150;inset:0;background:rgba(8,8,8,.97);display:grid;place-items:center;opacity:0;visibility:hidden;transition:.35s ease}.lightbox.open{opacity:1;visibility:visible}.lightbox img{max-width:91vw;max-height:88vh;object-fit:contain}.lb-close{position:absolute;top:24px;right:var(--pad);color:#fff;background:none;border:0;font:10px "DM Mono",monospace;letter-spacing:.12em;cursor:pointer}.lb-caption{position:absolute;left:var(--pad);bottom:24px;color:#bdbdbd;font:9px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:980px){:root{--content:min(88vw,820px)}.hero h1{font-size:clamp(58px,10.2vw,102px);white-space:normal}.overview-grid{grid-template-columns:1fr;gap:55px}.info-grid{max-width:600px}.gallery{columns:2;column-gap:14px}.work{margin-bottom:14px}}
+@media(max-width:650px){.site-header{padding-top:16px}.brand{font-size:12px}.brand-mark{width:21px;height:21px}.back-portfolio{height:30px;padding:0 13px;font-size:9px}.hero{min-height:700px}.hero-copy{bottom:102px}.eyebrow{margin-bottom:15px}.hero h1{font-size:clamp(54px,15vw,82px);line-height:.88;margin-bottom:22px}.hero-bottom{grid-template-columns:1fr auto}.hero-bottom span:nth-child(2){display:none}.hero-bottom span:nth-child(3){text-align:right}.overview{padding:92px 0 100px}.overview-grid{margin-top:42px}.overview-lead{font-size:21px}.info-grid{grid-template-columns:1fr 1fr;gap:28px 20px}.info strong{font-size:12px}.gallery-head{margin-bottom:36px}.gallery-section{padding-bottom:80px}.gallery{columns:1}.work{margin-bottom:13px;border-radius:7px}.work-overlay{opacity:1;padding-top:70px}.footer{padding-top:70px}.footer h2{margin-bottom:65px}.footer-meta{gap:20px;flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="#top" aria-label="Vyshakh Balakrishnan home"><span class="brand-mark"></span><span>VYSHAKH B</span><sup>™</sup></a>
+  <div class="header-actions"><a class="pill back-portfolio" href="../Portfolio.html">BACK TO PORTFOLIO</a></div>
+</header>
+
+<main id="top">
+  <section class="hero" id="hero">
+    <div class="hero-ambient" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <span class="hero-dot" aria-hidden="true"></span>
+
+    <div class="hero-cover" aria-hidden="true">
+      <img src="assets/minnal-08-illustrated-key-art.png" alt="Minnal Murali cover artwork">
+    </div>
+
+    <div class="hero-copy">
+      <div class="eyebrow">(FILM KEY ART)</div>
+      <h1>Minnal Murali</h1>
+      <div class="hero-tags"><span class="chip">KEY ART</span><span class="chip">POSTER DESIGN</span><span class="chip">VISUAL DEVELOPMENT</span></div>
+    </div>
+
+    <div class="hero-bottom">
+      <span>MINNAL MURALI</span>
+      <span>2021</span>
+      <span>SCROLL DOWN <b class="scroll-arrow">↘</b></span>
+    </div>
+  </section>
+
+  <div class="light-section" id="lightArea">
+    <section class="overview content">
+      <div class="section-row"><span>(OVERVIEW)</span><span>/01</span></div>
+      <div class="overview-grid reveal">
+        <p class="overview-lead">A selected visual exploration inspired by Minnal Murali, bringing together cinematic key art, title treatments, character-led posters, action-driven compositions, and illustrated campaign studies. The visual direction blends storm-lit blues, electric yellow, deep red, retro pulp textures, and bold Malayalam-cinema energy to frame the world of a home-grown superhero with a playful but cinematic edge.</p>
+        <div class="info-grid">
+          <div class="info"><small>PROJECT</small><strong>Minnal Murali</strong></div>
+          <div class="info"><small>YEAR</small><strong>2021</strong></div>
+          <div class="info"><small>DISCIPLINE</small><strong>Key Art / Poster Design</strong></div>
+          <div class="info"><small>DESIGNER</small><strong>Vyshakh Balakrishnan</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section content" id="gallery">
+      <div class="section-row gallery-head"><span>(SELECTED WORKS)</span><span>/02</span></div>
+      <div class="gallery">
+        
+        <article class="work reveal" data-src="assets/minnal-01-storm-signal.png" data-title="Storm Signal — Minnal Murali"><img src="assets/minnal-01-storm-signal.png" alt="Minnal Murali storm signal artwork"><div class="work-overlay"><div><h3>Storm Signal</h3><p>Cinematic Poster / Atmosphere</p></div><span class="work-num">01</span></div></article>
+        <article class="work reveal" data-src="assets/minnal-02-masked-hero.png" data-title="Masked Hero — Minnal Murali"><img src="assets/minnal-02-masked-hero.png" alt="Minnal Murali masked hero artwork"><div class="work-overlay"><div><h3>Masked Hero</h3><p>Character Key Art</p></div><span class="work-num">02</span></div></article>
+        <article class="work reveal" data-src="assets/minnal-03-title-treatment.png" data-title="Title Treatment — Minnal Murali"><img src="assets/minnal-03-title-treatment.png" alt="Minnal Murali title treatment artwork"><div class="work-overlay"><div><h3>Title Treatment</h3><p>Logo / Title Exploration</p></div><span class="work-num">03</span></div></article>
+        <article class="work reveal" data-src="assets/minnal-04-folk-hero.png" data-title="Folk Hero — Minnal Murali"><img src="assets/minnal-04-folk-hero.png" alt="Minnal Murali folk hero artwork"><div class="work-overlay"><div><h3>Folk Hero</h3><p>Poster Concept / Visual Study</p></div><span class="work-num">04</span></div></article>
+        <article class="work reveal" data-src="assets/minnal-05-hero-reveal.jpg" data-title="Hero Reveal — Minnal Murali"><img src="assets/minnal-05-hero-reveal.jpg" alt="Minnal Murali hero reveal artwork"><div class="work-overlay"><div><h3>Hero Reveal</h3><p>Theatrical Key Art</p></div><span class="work-num">05</span></div></article>
+        <article class="work reveal" data-src="assets/minnal-06-character-study.jpg" data-title="Character Study — Minnal Murali"><img src="assets/minnal-06-character-study.jpg" alt="Minnal Murali character study artwork"><div class="work-overlay"><div><h3>Character Study</h3><p>Campaign Poster</p></div><span class="work-num">06</span></div></article>
+        <article class="work reveal" data-src="assets/minnal-07-mask-reveal.jpg" data-title="Mask Reveal — Minnal Murali"><img src="assets/minnal-07-mask-reveal.jpg" alt="Minnal Murali mask reveal artwork"><div class="work-overlay"><div><h3>Mask Reveal</h3><p>Character Close-up</p></div><span class="work-num">07</span></div></article>
+        <article class="work reveal" data-src="assets/minnal-08-illustrated-key-art.png" data-title="Illustrated Key Art — Minnal Murali"><img src="assets/minnal-08-illustrated-key-art.png" alt="Minnal Murali illustrated key art artwork"><div class="work-overlay"><div><h3>Illustrated Key Art</h3><p>Illustration / Campaign Visual</p></div><span class="work-num">08</span></div></article>
+      </div>
+      <p class="gallery-note">Artwork is displayed at its native aspect ratio — no forced crop.</p>
+    </section>
+  </div>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer-inner">
+    <div class="footer-kicker">FILM • KEY ART • POSTER DESIGN</div>
+    <h2>Lightning, folklore, and cinematic energy.</h2>
+    <div class="footer-meta"><span>VYSHAKH BALAKRISHNAN © 2026</span><a href="#top">BACK TO TOP ↑</a></div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox"><button class="lb-close" id="lbClose">CLOSE ✕</button><img id="lbImage" alt="Artwork preview"><div class="lb-caption" id="lbCaption"></div></div>
+
+<script>
+const header=document.getElementById('siteHeader');
+const lightArea=document.getElementById('lightArea');
+new IntersectionObserver(([entry])=>header.classList.toggle('on-light',entry.isIntersecting),{rootMargin:'-70px 0px -85% 0px',threshold:0}).observe(lightArea);
+
+const revealObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+
+const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImage'),lbCaption=document.getElementById('lbCaption');
+document.querySelectorAll('.work[data-src]').forEach(w=>w.onclick=()=>{lbImg.src=w.dataset.src;lbCaption.textContent=w.dataset.title||'';lb.classList.add('open');document.body.style.overflow='hidden'});
+function closeLB(){lb.classList.remove('open');document.body.style.overflow=''}
+document.getElementById('lbClose').onclick=closeLB;lb.onclick=e=>{if(e.target===lb)closeLB()};
+addEventListener('keydown',e=>{if(e.key==='Escape')closeLB()});
+</script>
+</body>
+</html>
